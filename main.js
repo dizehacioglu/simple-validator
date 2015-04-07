@@ -10,8 +10,42 @@ alert(phoneNum[3] === "-" && phoneNum[7] === "-");
 // birth date
 // must follow the format xx/xx/xx
 
-var birthDate = prompt("When's your birthday?");
+var birthDate = prompt("When's your birthday?", "MM/DD/YY");
 alert(birthDate[2] === "/" && birthDate[5] === "/");
 
 // postal code
 // must follow the format xxxxx OR xxxxx-xxxx
+
+var postal = prompt("What's your postal code?", "xxxxx OR xxxxx-xxxx");
+alert(postal.length === 5 || (postal.length === 10 && postal[5] === "-"));
+
+// state abbreviation
+// must be two characters
+// must be all caps
+
+var state = prompt("Which state do you live in?", "ex. CO");
+alert(state.length === 2 && state.toUpperCase() === state);
+
+// married
+// must be yes or no
+// may be any capitalization: YES, Yes, yes
+
+var married = prompt("Are you married?", "Yes/No");
+alert(married.toUpperCase() === "YES" || married.toUpperCase() === "NO");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
